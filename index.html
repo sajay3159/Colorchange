@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.box:hover {
+  border-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="box" onclick="toggleBox(event)">1</div>
+        <div class="box" onclick="toggleBox(event)">2</div>
+        <div class="box" onclick="toggleBox(event)">3</div>
+        <div class="box" onclick="toggleBox(event)">4</div>
+        <div class="box" onclick="toggleBox(event)">5</div>
+        <div class="box" onclick="toggleBox(event)">6</div>
+        <div class="box" onclick="toggleBox(event)">7</div>
+        <div class="box" onclick="toggleBox(event)">8</div>
+        <div class="box" onclick="toggleBox(event)">9</div>
+        <div class="box" onclick="toggleBox(event)">10</div>
+      </div>
+
+    <script>
+
+function toggleBox(event) {
+  const box = event.target;
+  
+  if (box.classList.contains('green')) {
+    box.classList.remove('green');
+  } else {
+    box.classList.add('green');
+  }
+}
+    </script>
+</body>
+</html>
