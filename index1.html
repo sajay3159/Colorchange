@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box {
+  height: 100%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 20px 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.box:hover {
+  border-color: blue;
+}
+
+.green-box {
+  background-color: green;
+}
+
+    </style>
+</head>
+<body>
+    <div id="1" class="box" onclick="handleClick('1')"></div>
+    <div id="2" class="box" onclick="handleClick('2')"></div>
+    <div id="3" class="box" onclick="handleClick('3')"></div>
+    <div id="4" class="box" onclick="handleClick('4')"></div>
+    <div id="5" class="box" onclick="handleClick('5')"></div>
+    <div id="6" class="box" onclick="handleClick('6')"></div>
+    <div id="7" class="box" onclick="handleClick('7')"></div>
+    <div id="8" class="box" onclick="handleClick('8')"></div>
+    <div id="9" class="box" onclick="handleClick('9')"></div>
+    <div id="10" class="box" onclick="handleClick('10')"></div>
+    <script>
+        function handleClick(id){
+            console.log(id + "box is clicked");
+            var clickedBox =document.getElementById(id);
+            if(clickedBox.classList.contains('green-box')){
+                clickedBox.classList.remove('green-box');
+            } else {
+                clickedBox.classList.add('green-box');
+            }
+        }
+    </script>
+</body>
+</html>
